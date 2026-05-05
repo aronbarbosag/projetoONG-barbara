@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #EEDD82;
+  color: #333333;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #FFFFFF;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #3B6B4C;
+}
+
+.header nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #555555;
+  font-weight: bold;
+}
+
+.btn-login {
+  background: #3B6B4C;
+  color: #FFFFFF;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px;
+}
+
+.main {
+  width: 50%;
+  text-align: center;
+}
+.main p{
+  text-align: center;
+  margin: 20px 0;
+  
+
+}
+.main h4{
+  color:#ee9d06;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.main h3 {
+  color:#ee9d06;
+  text-align: center;
+  font-size: 19px;
+  margin: 20px 0;
+}
+
+.main h1 {
+  font-size: 36px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.main ul {
+  list-style-position: inside;
+  padding: 30px;
+  text-align: center;
+}
+
+.main li {
+  margin: 10px 0;
+  
+}
+
+.btn-doar {
+  display: inline-block;
+  margin-top: 15px;
+  background: #3B6B4C;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;  
+}
+
+.fi-rr-hand-holding-heart{
+  margin-right: 8px;
+}
+
+
+.form-box {
+  width: 40%;
+  background: #ee9d06;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.form-box input,
+.form-box select,
+.form-box textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+}
+
+
+.btn-enviar {
+  width: 100%;
+  background: #3B6B4C;
+  color: #FFFFFF;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+}
+
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: #3B2B20;
+  color: #FFFFFF;
+  padding: 40px;
+}
+
+.footer h3 {
+  margin-bottom: 5px;
+  text-align: left;
+  margin: 20px;
+}
+
+
+#telefone{
+  text-align: left;
+  margin: 15px;
+}
+.fi.fi-rr-phone-call {
+  margin: 10px;
+}
+
+#email {
+  text-align: left;
+  margin: 15px;
+}
+.fi.fi-rr-envelope {
+  margin: 10px;
+}
+#endereco {
+  text-align: left;
+  margin: 15px;
+}
+.fi.fi-rr-marker {
+  margin: 10px;
+
+}
+
+
+.footer a {
+  text-align: left;
+  margin: 10px;
+  display: block;
+  color: #FFFFFF;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.copyright::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #FFFFFF;
+  margin: 0 auto 15px;
+}
