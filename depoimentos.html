@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ACITP - Depoimentos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --green: #2f5d4f;
+    --green-dark: #1f4035;
+    --gold: #c9a24a;
+    --bg: #ffffff;
+    --section-bg: #ececec;
+    --card: #ffffff;
+    --text: #333;
+    --muted: #777;
+    --footer-bg: #2b2520;
+    --footer-text: #cfc8c0;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+  }
+
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 60px;
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    color: var(--green);
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+  .logo svg { width: 20px; height: 20px; fill: var(--green); }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+    align-items: center;
+  }
+  nav a {
+    text-decoration: none;
+    color: #444;
+    font-size: 14px;
+    transition: color .2s;
+  }
+  nav a:hover { color: var(--green); }
+  .btn-entrar {
+    background: var(--green);
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  .btn-entrar:hover { background: var(--green-dark); color: #fff; }
+
+  /* Section */
+  .depoimentos {
+    background: var(--section-bg);
+    padding: 80px 20px;
+  }
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .section-tag {
+    text-align: center;
+    color: var(--gold);
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .section-title {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    color: var(--green);
+    font-weight: 500;
+    margin-bottom: 60px;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .card {
+    background: var(--card);
+    border-radius: 14px;
+    padding: 40px 30px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    text-align: center;
+    position: relative;
+  }
+  .card .quote-icon {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 60px;
+    color: #e8e2d4;
+    line-height: 1;
+  }
+  .card p {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 19px;
+    color: #555;
+    margin-bottom: 28px;
+  }
+  .card .divider {
+    width: 40px;
+    height: 1px;
+    background: #d4d4d4;
+    margin: 0 auto 16px;
+  }
+  .card .name {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--green);
+    font-weight: 700;
+  }
+
+  /* Footer */
+  footer {
+    background: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 60px 60px 24px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .footer-grid h4 {
+    color: #fff;
+    margin-bottom: 16px;
+    font-size: 15px;
+  }
+  .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+  .footer-brand svg { width: 16px; height: 16px; fill: var(--gold); }
+  .footer-grid p, .footer-grid li {
+    font-size: 13px;
+    color: #aaa39b;
+    margin-bottom: 8px;
+    list-style: none;
+  }
+  .footer-grid a { color: #aaa39b; text-decoration: none; }
+  .footer-grid a:hover { color: #fff; }
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #3d3530;
+    font-size: 12px;
+    color: #888;
+  }
+
+  @media (max-width: 900px) {
+    .cards { grid-template-columns: 1fr; }
+    nav ul { display: none; }
+    .footer-grid { grid-template-columns: 1fr; }
+    header { padding: 16px 20px; }
+    .section-title { font-size: 36px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.35-7-10a4 4 0 0 1 7-2.65A4 4 0 0 1 19 11c0 5.65-7 10-7 10z"/></svg>
+    ACITP
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#">Início</a></li>
+      <li><a href="#">Nossa História</a></li>
+      <li><a href="#">Eventos</a></li>
+      <li><a href="#">Doações</a></li>
+      <li><a href="#">Voluntariado</a></li>
+      <li><a href="#">Depoimentos</a></li>
+      <li><a href="#">Contato</a></li>
+      <li><a href="#" class="btn-entrar">Entrar</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="depoimentos">
+  <div class="container">
+    <div class="section-tag">O QUE DIZEM</div>
+    <h2 class="section-title">Depoimentos</h2>
+    <div class="cards">
+      <div class="card">
+        <span class="quote-icon">”</span>
+        <p>"Desde que meu pai chegou ao Lar, sinto uma paz imensa. O carinho e a atenção que ele recebe são visíveis em seu sorriso diário."</p>
+        <div class="divider"></div>
+        <div class="name">LUCIANA SILVA</div>
+      </div>
+      <div class="card">
+        <span class="quote-icon">”</span>
+        <p>"O atendimento médico e as atividades recreativas superaram todas as nossas expectativas. É realmente um lugar de amor e dedicação."</p>
+        <div class="divider"></div>
+        <div class="name">RICARDO OLIVEIRA</div>
+      </div>
+      <div class="card">
+        <span class="quote-icon">”</span>
+        <p>"A equipe é maravilhosa e sempre nos mantém informados. Recomendo a todos que buscam um cuidado humanizado para seus entes queridos."</p>
+        <div class="divider"></div>
+        <div class="name">MARIA FERNANDA</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">
+        <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.35-7-10a4 4 0 0 1 7-2.65A4 4 0 0 1 19 11c0 5.65-7 10-7 10z"/></svg>
+        ACITP
+      </div>
+      <p>Transformando vidas com amor e dignidade desde 2010. Cada idoso merece ser cuidado com carinho.</p>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <p class="contact-item">📞 (+55) 21 96441-4945</p>
+      <p class="contact-item">✉️ <a href="mailto:acitp2010@gmail.com">acitp2010@gmail.com</a></p>
+      <p class="contact-item">📍 Estrada do Babi, 14455, Vila Magalhães em Belford Roxo</p>
+    </div>
+    <div>
+      <h4>Links Úteis</h4>
+      <ul>
+        <li><a href="#">Nossa História</a></li>
+        <li><a href="#">Eventos</a></li>
+        <li><a href="#">Doações</a></li>
+        <li><a href="#">Voluntariado</a></li>
+        <li><a href="#">Depoimentos</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 ONG ACITP. Todos os direitos reservados.
+  </div>
+</footer>
+
+</body>
+</html>
