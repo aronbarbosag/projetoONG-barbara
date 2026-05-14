@@ -5,14 +5,16 @@
         }
 
         body {
-            height: 100%;
+            min-height: 100vh;
             margin: 0;
+            display: flex;
+            flex-direction: column;
         }
 
         header {
             background: white;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            padding: 15px 5%;
+            padding: 15px 6% 13px;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -36,9 +38,9 @@
             text-decoration: none;
         }
 
-        .logo span {
-            color: #476E56;
-        }
+       .logo i{
+        color:#457356;
+       }
 
         .menu {
             display: flex;
@@ -72,7 +74,7 @@
         main {
             flex: 1;
             display: flex;
-            height: calc(100vh - 70px);
+            min-height: calc(100vh - 70px);
         }
 
         .parteverde {
@@ -122,6 +124,8 @@
             margin-bottom: 20px;
             max-width: 420px;
             line-height: 1.2;
+            text-align: center;
+            white-space: nowrap;
         }
 
         .parteverde p {
@@ -129,6 +133,7 @@
             line-height: 1.6;
             max-width: 420px;
             opacity: 0.95;
+            text-align: center;
         }
 
         .partebranca {
@@ -243,17 +248,26 @@
         }
 
         footer {
-            background-color:#3F2F24;
+            background-color:#372C25;
             color: #ddd;
-            padding: 40px 5% 10px;     /* Reduzido */
+            padding: 40px 10% 10px;  
+                
+        }
 
+        i {
+            color: #D19847;
+            margin-right: 10px;
+           
         }
 
         .footer-content {
-            max-width: 1200px;
+            align-items: center;
+            justify-items: center;
+            text-align: left;
+            max-width: 1400px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 0.5fr;
             gap: 50px;
         }
 
@@ -261,29 +275,38 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 700;
-            color: white;
+            color:  #FAF8F5;
             margin-bottom: 16px;
         }
 
         .footer-logo span {
-            color:  white;
+            color:  #FAF8F5;
         }
 
         .footer-desc {
+            color: #D2CBC2;
             line-height: 1.6;
             max-width: 320px;
         }
 
-        .footer-column h3 {
-            color:  white;
-            margin-bottom: 20px;
-            font-size: 18px;
+        .footer-column {
+            justify-content: center;
         }
+
+        .footer-column h3 {
+            color:  #D2CBC2;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        
 
         .footer-column ul {
             list-style: none;
+            font-size: 14px;
+            text-align: left;
+    
         }
 
         .footer-column ul li {
@@ -291,7 +314,7 @@
         }
 
         .footer-column a {
-            color: #ddd;
+            color:  #D2CBC2;
             text-decoration: none;
             transition: color 0.3s;
         }
@@ -302,11 +325,17 @@
 
         .contact-info {
             line-height: 2.2;
+            font-size: 14px;
+        }
+        .contact-info p{
+            color: #D2CBC2;
+            text-align: left;
         }
 
         .contact-info a {
-            color: #ddd;
+            color: #D2CBC2;
             text-decoration: none;
+            font-size: 14px;
         }
 
         .contact-info a:hover {
@@ -325,9 +354,17 @@
         @media (max-width: 900px) {
             main {
                 flex-direction: column;
+                min-height: auto;
             }
             .footer-content {
                 grid-template-columns: 1fr;
                 gap: 40px;
+            }
+            .parteverde{
+                min-height: 40vh;
+            }
+            .parteverde h1{
+                white-space: normal;
+                font-size: 38px;
             }
         }
