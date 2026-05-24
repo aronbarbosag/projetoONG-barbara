@@ -53,7 +53,7 @@
     .logo {
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 18px;
         font-size: 24px;
         font-weight: 700;
         color: #2C3E2F;
@@ -72,6 +72,7 @@
         list-style: none;
         gap: 30px;
         align-items: center;
+        font-size: 16px;
     }
 
     .menu a {
