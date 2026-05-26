@@ -6,7 +6,7 @@
 <title>ACTP — Apoie Nossa Causa</title>
 <link rel="stylesheet" href="doacao.css" />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 </head>
 <body>
@@ -41,43 +41,45 @@
     </div>
 
     <div class="doacao-grid">
-      <div class="pix-card">
-        <h3>Doe agora via PIX</h3>
-        <p class="sub">Escaneie o QR Code ou copie a chave</p>
-        <div class="qr" aria-label="QR Code"></div>
-        <div class="pix-key">
-          <span>actp2030@gmail.com</span>
-          <button title="Copiar">📋</button>
+      <div class="pix-wrap">
+        <div class="pix-card">
+          <h3>Doe agora via PIX</h3>
+          <p class="sub">Escaneie o QR Code ou copie a chave</p>
+          <div class="qr" aria-label="QR Code"></div>
+          <div class="pix-key">
+            <span id="pix-chave">actp2010@gmail.com</span>
+            <button type="button" class="copiar-pix" title="Copiar chave PIX" aria-label="Copiar chave PIX"><i class="fa-regular fa-copy"></i></button>
+          </div>
+          <a href="#" class="btn btn-green copiar-pix">Copiar Chave PIX</a>
         </div>
-        <a href="#" class="btn btn-green">Copiar Chave PIX</a>
-        <div><a href="#" class="seja-voluntario">Seja Voluntário</a></div>
+        <a href="#" class="seja-voluntario">Seja Voluntário</a>
       </div>
 
       
       <div class="tiers">
         <div class="tier">
-          <div class="check">✓</div>
+          <div class="check"><i class="fa-regular fa-heart"></i></div>
           <div>
             <h4>R$10</h4>
             <p>Ajuda na alimentação de uma família por uma semana.</p>
           </div>
         </div>
         <div class="tier">
-          <div class="check">✓</div>
+          <div class="check"><i class="fa-regular fa-heart"></i></div>
           <div>
             <h4>R$25</h4>
             <p>Contribui com medicamentos essenciais por um mês.</p>
           </div>
         </div>
         <div class="tier">
-          <div class="check">✓</div>
+          <div class="check"><i class="fa-regular fa-heart"></i></div>
           <div>
             <h4>R$50</h4>
             <p>Materiais escolares para crianças em grupo.</p>
           </div>
         </div>
         <div class="tier">
-          <div class="check">✓</div>
+          <div class="check"><i class="fa-regular fa-heart"></i></div>
           <div>
             <h4>R$100</h4>
             <p>Cesta de cuidado completa para um idoso por mês.</p>
@@ -126,5 +128,47 @@
   </div>
 </footer>
 
+<script>
+  const pixChave = document.getElementById("pix-chave").textContent.trim();
+  const botoesCopiar = document.querySelectorAll(".copiar-pix");
+
+  function copiarComFallback(texto) {
+    const campoTemporario = document.createElement("textarea");
+    campoTemporario.value = texto;
+    campoTemporario.setAttribute("readonly", "");
+    campoTemporario.style.position = "fixed";
+    campoTemporario.style.opacity = "0";
+    document.body.appendChild(campoTemporario);
+    campoTemporario.select();
+    document.execCommand("copy");
+    document.body.removeChild(campoTemporario);
+  }
+
+  async function copiarPix(event) {
+    event.preventDefault();
+
+    try {
+      if (navigator.clipboard) {
+        await navigator.clipboard.writeText(pixChave);
+      } else {
+        copiarComFallback(pixChave);
+      }
+    } catch {
+      copiarComFallback(pixChave);
+    }
+
+    const botao = event.currentTarget;
+    const textoOriginal = botao.innerHTML;
+    botao.innerHTML = botao.tagName === "A" ? "Chave copiada!" : '<i class="fa-solid fa-check"></i>';
+
+    setTimeout(() => {
+      botao.innerHTML = textoOriginal;
+    }, 1800);
+  }
+
+  botoesCopiar.forEach((botao) => {
+    botao.addEventListener("click", copiarPix);
+  });
+</script>
 </body>
 </html>

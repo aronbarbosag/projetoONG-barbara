@@ -248,86 +248,108 @@
         }
 
         footer {
-        background-color: #372C25;
-        color: #ddd;
-        padding: 40px 10% 10px;
-        margin-top: auto;
-    }
+            background-color:#372C25;
+            color: #ddd;
+            padding: 40px 10% 10px;  
+                
+        }
 
-    footer i {
-        color: #D19847;
-        margin-right: 10px;
-    }
+        i {
+            color: #D19847;
+            margin-right: 10px;
+           
+        }
 
-    .footer-content {
-        align-items: center;
-        justify-items: center;
-        text-align: left;
-        max-width: 1400px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr 0.5fr;
-        gap: 50px;
-    }
+        .footer-content {
+            align-items: center;
+            justify-items: center;
+            text-align: left;
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 0.5fr;
+            gap: 50px;
+        }
 
-    .footer-logo {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-size: 22px;
-        font-weight: 700;
-        color: #FAF8F5;
-        margin-bottom: 16px;
-        position: relative;
-        top: 1px;
-    }
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 22px;
+            font-weight: 700;
+            color:  #FAF8F5;
+            margin-bottom: 16px;
+        }
 
-    .footer-logo span { color: #FAF8F5;}
-    .footer-logo .heart { color: #D19847; }
+        .footer-logo span {
+            color:  #FAF8F5;
+        }
 
-    .footer-desc {
-        color: #D2CBC2;
-        line-height: 1.6;
-        max-width: 320px;
-    }
+        .footer-desc {
+            color: #D2CBC2;
+            line-height: 1.6;
+            max-width: 320px;
+        }
 
-    .footer-column { justify-content: center; }
+        .footer-column {
+            justify-content: center;
+        }
 
-    .footer-column h3 {
-        color: #D2CBC2;
-        margin-bottom: 20px;
-        font-size: 20px;
-    }
+        .footer-column h3 {
+            color:  #D2CBC2;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        
 
-    .footer-column ul {
-        list-style: none;
-        font-size: 14px;
-        text-align: left;
-    }
+        .footer-column ul {
+            list-style: none;
+            font-size: 14px;
+            text-align: left;
+    
+        }
 
-    .footer-column ul li { margin-bottom: 12px; }
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
 
-    .footer-column a {
-        color: #D2CBC2;
-        text-decoration: none;
-        transition: color 0.3s;
-    }
+        .footer-column a {
+            color:  #D2CBC2;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
 
-    .footer-column a:hover { color: #858585; }
+        .footer-column a:hover {
+            color: #858585;
+        }
 
-    .contact-info { line-height: 2.2; font-size: 14px; }
-    .contact-info p { color: #D2CBC2; text-align: left; }
-    .contact-info a { color: #D2CBC2; text-decoration: none; font-size: 14px; }
-    .contact-info a:hover { color: #80807f; }
+        .contact-info {
+            line-height: 2.2;
+            font-size: 14px;
+        }
+        .contact-info p{
+            color: #D2CBC2;
+            text-align: left;
+        }
 
-    .footer-bottom {
-        margin-top: 60px;
-        padding-top: 20px;
-        border-top: 1px solid #444;
-        text-align: center;
-        color: #888;
-        font-size: 14px;
-    }
+        .contact-info a {
+            color: #D2CBC2;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .contact-info a:hover {
+            color: #80807f;
+        }
+
+        .footer-bottom {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            text-align: center;
+            color: #888;
+            font-size: 14px;
+        }
 
         @media (max-width: 900px) {
             main {
