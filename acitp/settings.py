@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -26,6 +27,15 @@ SECRET_KEY = "django-insecure--tc$^4fnya+#-da^sw92*nc-3ftpwkt@-ad29a@jgi1moth$e&
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
+
+# Render usa proxy HTTPS; informe o host externo para evitar erro CSRF 403.
+RENDER_EXTERNAL_HOSTNAME = os.environ.get("RENDER_EXTERNAL_HOSTNAME")
+CSRF_TRUSTED_ORIGINS = ["https://projetoong-barbara.onrender.com"]
+if RENDER_EXTERNAL_HOSTNAME:
+    CSRF_TRUSTED_ORIGINS.append(f"https://{RENDER_EXTERNAL_HOSTNAME}")
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
 
 
 # Application definition
